@@ -1,0 +1,63 @@
+{% set version = "00c61c2" %}
+
+package:
+  name: theia
+  version: {{ version }}
+
+source:
+# This is a fork of Chris's repository with some custom changes
+# needed for ASP. The changes are superficial overall but became
+# so numerous that applying them as patches become triky.     
+  git_url: git@github.com:oleg-alexandrov/TheiaSfM.git
+  git_tag: {{ version }}
+  patches:
+
+build:
+  number: 1000
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
+    - boost 1.68.0
+    - eigen
+    - gflags
+    - glog
+    - ceres-solver
+    - suitesparse
+    - jpeg 9b
+    - openjpeg 2.1.0
+    - libpng 1.6.37
+    - libtiff 4.0.9
+    - imagemagick 6.8.6_10
+  run:
+    - boost 1.68.0
+    - eigen
+    - gflags
+    - glog
+    - ceres-solver
+    - suitesparse
+    - jpeg 9b
+    - openjpeg 2.1.0
+    - libpng 1.6.37
+    - libtiff 4.0.9
+    - imagemagick 6.8.6_10
+
+test:
+  commands:
+  files:
+
+about:
+  home: https://github.com/sweeneychris/TheiaSfM
+  license: BSD
+  license_file: LICENSE.txt
+  summary: An open source library for multiview geometry and structure from motion
+  description:
+  dev_url:
+  doc_url:
+
+extra:
+  recipe-maintainers:
+    - oleg-alexandrov
