@@ -52,7 +52,7 @@ test:
 about:
   home: https://github.com/sweeneychris/TheiaSfM
   license: BSD
-  license_file: LICENSE.txt
+  license_file:
   summary: An open source library for multiview geometry and structure from motion
   description:
   dev_url:

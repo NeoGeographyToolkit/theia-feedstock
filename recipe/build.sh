@@ -14,7 +14,6 @@ cmake                                          \
   -DCMAKE_PREFIX_PATH=${PREFIX}                \
   -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}        \
   -DBoost_INCLUDE_DIR:PATH=${PREFIX}/include   \
-  -DWITH_GEOTIFF:BOOL=ON                       \
   -DTIFF_INCLUDE_DIR:PATH=${PREFIX}/include    \
   -DBUILD_SHARED_LIBS=ON                       \
   -DCMAKE_VERBOSE_MAKEFILE=ON                  \
