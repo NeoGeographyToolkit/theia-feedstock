@@ -12,7 +12,7 @@ export LDFLAGS="-L$PREFIX/lib"
 # Make libraries
 cmake                                                  \
   -DCMAKE_BUILD_TYPE=Release                           \
-  -DCMAKE_CXX_FLAGS="-g -O3 -std=c++11 -fPIC $LDFLAGS" \
+  -DCMAKE_CXX_FLAGS="-O3 -std=c++11 -fPIC $LDFLAGS"    \
   -DCMAKE_PREFIX_PATH=${PREFIX}                        \
   -DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}                \
   -DBoost_INCLUDE_DIR:PATH=${PREFIX}/include           \
