@@ -1,4 +1,4 @@
-{% set version = "f5d93f5" %}
+{% set version = "isis4.4.0" %} # synched up to isis dependencies for this version
 
 package:
   name: theia
@@ -9,7 +9,7 @@ source:
 # needed for ASP. The changes are superficial overall but became
 # so numerous that applying them as patches become triky.     
   git_url: git@github.com:oleg-alexandrov/TheiaSfM.git
-  git_tag: {{ version }}
+  git_tag: f5d93f5
   patches:
 
 build:
@@ -19,35 +19,38 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake 3.16.0
   host:
-    - boost 1.68.0
-    - eigen
+    - boost 1.68
+    - eigen 3.3.7
     - gflags
     - glog
     - suitesparse 5.7.2
     - flann 1.9.1
-    - tbb
+    - tbb 2020.2
     - ceres-solver 1.14.0
     - jpeg 9b
     - openjpeg 2.1.0
     - libpng 1.6.37
     - libtiff 4.0.9
-    - imagemagick 6.8.6_10
+    - imagemagick isis4.4.0
+    - isis   4.4.0
+
   run:
-    - boost 1.68.0
-    - eigen
+    - boost 1.68
+    - eigen 3.3.7
     - gflags
     - glog
     - suitesparse 5.7.2
     - flann 1.9.1
-    - tbb
+    - tbb 2020.2
     - ceres-solver 1.14.0
     - jpeg 9b
     - openjpeg 2.1.0
     - libpng 1.6.37
     - libtiff 4.0.9
-    - imagemagick 6.8.6_10
+    - imagemagick isis4.4.0
+    - isis   4.4.0
 
 test:
   commands:
