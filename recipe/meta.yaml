@@ -34,7 +34,7 @@ requirements:
     - libpng 1.6.37
     - libtiff 4.0.9
     - imagemagick isis4.4.0
-    - isis   4.4.0
+    - isis   4.4.0 # to catch dependency problems
 
   run:
     - boost 1.68
@@ -50,7 +50,7 @@ requirements:
     - libpng 1.6.37
     - libtiff 4.0.9
     - imagemagick isis4.4.0
-    - isis   4.4.0
+    - isis   4.4.0 # to catch dependency problems
 
 test:
   commands:
