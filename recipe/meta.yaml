@@ -1,4 +1,4 @@
-{% set version = "isis4.4.0" %} # synched up to isis dependencies for this version
+{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
 
 package:
   name: theia
@@ -21,36 +21,38 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake 3.16.0
   host:
-    - boost 1.68
+    - boost 1.68.0
     - eigen 3.3.7
     - gflags
     - glog
-    - suitesparse 5.7.2
+    - suitesparse 5.10.1
+# Must use the ceres conda package which depends on Eigen 3.3.7
+    - ceres-solver=1.14.0=h0948850_10 # [linux]
+    - ceres-solver=1.14.0=hb9d6bad_10 # [osx]
     - flann 1.9.1
     - tbb 2020.2
-    - ceres-solver 1.14.0
-    - jpeg 9b
+    - jpeg 9d
     - openjpeg 2.1.0
     - libpng 1.6.37
-    - libtiff 4.0.9
-    - imagemagick isis4.4.0
-    - isis   4.4.0 # to catch dependency problems
+    - libtiff 4.0.10
+    - imagemagick isis5.0.1
 
   run:
-    - boost 1.68
+    - boost 1.68.0
     - eigen 3.3.7
     - gflags
     - glog
-    - suitesparse 5.7.2
+    - suitesparse 5.10.1
     - flann 1.9.1
     - tbb 2020.2
-    - ceres-solver 1.14.0
-    - jpeg 9b
+# Must use the ceres conda package which depends on Eigen 3.3.7
+    - ceres-solver=1.14.0=h0948850_10 # [linux]
+    - ceres-solver=1.14.0=hb9d6bad_10 # [osx]
+    - jpeg 9d
     - openjpeg 2.1.0
     - libpng 1.6.37
-    - libtiff 4.0.9
-    - imagemagick isis4.4.0
-    - isis   4.4.0 # to catch dependency problems
+    - libtiff 4.0.10
+    - imagemagick isis5.0.1
 
 test:
   commands:
