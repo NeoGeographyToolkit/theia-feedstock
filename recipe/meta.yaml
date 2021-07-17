@@ -25,6 +25,8 @@ requirements:
     - eigen 3.3.7
     - gflags 2.2.2
     - glog   0.4.0
+    - liblapack 3.8.0
+    - blas      1.1
     - suitesparse 5.10.1
 # Must use the ceres conda package which depends on Eigen 3.3.7
     - ceres-solver=1.14.0=h0948850_10 # [linux]
@@ -42,6 +44,8 @@ requirements:
     - eigen 3.3.7
     - gflags 2.2.2
     - glog   0.4.0
+    - liblapack 3.8.0
+    - blas      1.1
     - suitesparse 5.10.1
     - flann 1.9.1
     - tbb 2020.2
