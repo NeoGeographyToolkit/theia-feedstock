@@ -1,4 +1,4 @@
-{% set version = "isis5.0.1" %} # synched up to isis dependencies for this version
+{% set version = "isis6" %} # synched up to isis dependencies for this version
 
 package:
   name: theia
@@ -21,46 +21,44 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake 3.16.0
   host:
-    - boost 1.68.0
-    - eigen 3.3.7
-    - gflags 2.2.2
-    - glog   0.4.0
-    - liblapack 3.8.0
-    - blas      1.1
-    - suitesparse 5.10.1
-# Must use the ceres conda package which depends on Eigen 3.3.7
-    - ceres-solver=1.14.0=h0948850_10 # [linux]
-    - ceres-solver=1.14.0=hb9d6bad_10 # [osx]
-    - flann 1.9.1
-    - tbb 2020.2
-    - jpeg 9d
-    - openjpeg 2.1.0
-    - libpng 1.6.37
-    - libtiff 4.0.10
-    - imagemagick isis5.0.1
+    - boost       1.68.0
+    - eigen       3.4.0
+    - liblapack   3.9.0
+    - libcblas    3.9.0
+    - libblas     3.9.0
+    - blas        1.1
+# Must use the ceres conda package which depends on Eigen 3.4.0
+    - ceres-solver=1.14.0=hf302a74_15 # [linux]
+    - ceres-solver=1.14.0=h636452b_15 # [osx]
+    - flann       1.9.1
+    - tbb         2021.5.0
+    - jpeg        9*
+    - openjpeg    2.3.0
+    - libpng      1.6.37
+    - libtiff     4.0.10
+    - imagemagick isis6
 
-  run:
-    - boost 1.68.0
-    - eigen 3.3.7
-    - gflags 2.2.2
-    - glog   0.4.0
-    - liblapack 3.8.0
-    - blas      1.1
-    - suitesparse 5.10.1
-    - flann 1.9.1
-    - tbb 2020.2
-# Must use the ceres conda package which depends on Eigen 3.3.7
-    - ceres-solver=1.14.0=h0948850_10 # [linux]
-    - ceres-solver=1.14.0=hb9d6bad_10 # [osx]
-    - jpeg 9d
-    - openjpeg 2.1.0
-    - libpng 1.6.37
-    - libtiff 4.0.10
-    - imagemagick isis5.0.1
+  host:
+    - boost       1.68.0
+    - eigen       3.4.0
+    - liblapack   3.9.0
+    - libcblas    3.9.0
+    - libblas     3.9.0
+    - blas        1.1
+# Must use the ceres conda package which depends on Eigen 3.4.0
+    - ceres-solver=1.14.0=hf302a74_15 # [linux]
+    - ceres-solver=1.14.0=h636452b_15 # [osx]
+    - flann       1.9.1
+    - tbb         2021.5.0
+    - jpeg        9*
+    - openjpeg    2.3.0
+    - libpng      1.6.37
+    - libtiff     4.0.10
+    - imagemagick isis6
 
-test:
-  commands:
-  files:
+#test:
+#  commands:
+#  files:
 
 about:
   home: https://github.com/sweeneychris/TheiaSfM
