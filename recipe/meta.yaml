@@ -8,7 +8,7 @@ source:
 # This is a fork of Chris's repository with some custom changes
 # needed for ASP. The changes are superficial overall but became
 # so numerous that applying them as patches become triky.     
-  git_url: git@github.com:oleg-alexandrov/TheiaSfM.git
+  git_url: git@github.com:NeoGeographyToolkit/TheiaSfM.git
   git_tag: f5d93f5
   patches:
 
