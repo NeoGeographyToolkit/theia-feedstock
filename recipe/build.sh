@@ -28,8 +28,13 @@ mkdir -p build && cd build
 # module-mode find_package calls (matches the MultiView build, which relies on
 # CMAKE_PREFIX_PATH/MULTIVIEW_DEPS_DIR=$PREFIX instead). TheiaSfM adds its own
 # -std=c++17.
+# BUILD_TESTING=OFF: TheiaSfM's internal *_test.cc use std::random_shuffle,
+# removed in C++17. clang/libc++ (osx) rejects it; gcc/libstdc++ (linux) still
+# provides it, so this only broke the osx build. ASP needs only libtheia + the
+# apps, never theia's tests, so disabling them is correct on all platforms.
 cmake                                          \
     -DCMAKE_BUILD_TYPE=Release                 \
+    -DBUILD_TESTING=OFF                         \
     -DMULTIVIEW_DEPS_DIR=${PREFIX}             \
     -DCMAKE_PREFIX_PATH=${PREFIX}              \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}           \
