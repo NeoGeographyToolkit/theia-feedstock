@@ -42,6 +42,7 @@ cmake                                          \
     -DCMAKE_C_FLAGS='-O3 -Wno-error'           \
     -DCMAKE_SKIP_INSTALL_RPATH=ON              \
     -DCMAKE_VERBOSE_MAKEFILE=ON                \
+    -DBUILD_TESTING=OFF                        \
     ..
 make -j${CPU_COUNT}
 make install

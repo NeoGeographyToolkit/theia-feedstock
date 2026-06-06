@@ -45,6 +45,7 @@ requirements:
     - libopencv 4.12.*
     - libprotobuf 6.31.1
     - flann
+    - tbb       # ceres cmake config requires TBB::tbb target
     - vlfeat    # external SIFT (theia includes vl/sift.h, links -lvl)
   run:
     - gflags
