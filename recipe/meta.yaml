@@ -11,8 +11,8 @@ source:
   sha256: d5a8383b6aba4814f2db832b52e9d599b411873067efded8da1adea3dd4d9ef5
 
 build:
-  number: 2
-  string: asp_2      # ASP channel marker; bump to re-spin (append-only)
+  number: 3
+  string: asp_3_{{ target_platform | replace("-", "_") }}      # ASP channel marker; bump to re-spin (append-only)
   skip: true  # [win]
 
 requirements:
